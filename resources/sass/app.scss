@@ -1,0 +1,17 @@
+// Fonts
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import 'mdb-ui-kit/css/mdb.min.css';
+$bootstrap-icons-font-src: url("bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"), url("bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+@import "bootstrap-icons/font/bootstrap-icons.scss";
+@import 'sweetalert2/src/sweetalert2.scss';
+@import '@tkrotoff/bootstrap-floating-label/src/bootstrap-floating-label';
+@import 'animate.css';
+body.swal2-shown > [aria-hidden="true"] {
+    transition: 0.1s filter;
+    filter: blur(10px);
+  }

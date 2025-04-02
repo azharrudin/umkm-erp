@@ -18,9 +18,10 @@ return new class extends Migration
             $table->integer("item_price");
             $table->date("item_since");
             $table->string("item_name");
-            $table->integer("quantity");
-            $table->string("vendor_name");
-            $table->string("is_rejected");
+            $table->mediumText("notes");
+            $table->unsignedBigInteger("supplier_id");
+            $table->foreign("supplier_id")->references("id")->on("warehouse_suppliers");
+
             $table->timestamps();
         });
     }

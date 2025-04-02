@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class WarehouseModule extends Model
+class WarehouseSupplier extends Model
 {
     use HasFactory;
-    protected $table = 'warehouse_modules'; 
     protected $guarded = [];
+    protected $table = 'warehouse_suppliers'; 
+
+  
 }

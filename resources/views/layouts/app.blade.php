@@ -11,32 +11,34 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="assets/css/main/app.css">
-    <link rel="stylesheet" href="assets/css/main/app-dark.css">
-    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
-    <link rel="stylesheet" href="assets/css/shared/iconly.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/main/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main/app-dark.css') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.svg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ asset('assets/css/shared/iconly.css') }}">
     <!-- Need: Apexcharts -->
-    <link rel="stylesheet" href="assets/css/main/app.css">
-    <link rel="stylesheet" href="assets/css/main/app-dark.css">
     <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
-    <script src="assets/extensions/jquery/jquery.min.js"></script>
+    <script src="{{ asset('assets/extensions/jquery/jquery.min.js') }}"></script>
 
-    <link rel="stylesheet" href="assets/css/pages/fontawesome.css">
-    
+
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/fontawesome.css') }}">
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{ asset('styles/style.css') }}">
 
-    <script src="assets/js/extensions/datatables.js"></script>
-    <link rel="stylesheet" href="assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
-    
+    <script src="{{ asset('assets/js/extensions/datatables.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}">
 
-    <script src="sweetalert2.all.min.js"></script>
+    <script src="{{ asset('sweetalert2.all.min.js') }}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.css" integrity="sha512-CbQfNVBSMAYmnzP3IC+mZZmYMP2HUnVkV4+PwuhpiMUmITtSpS7Prr3fNncV1RBOnWxzz4pYQ5EAGG4ck46Oig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css" integrity="sha512-kq3FES+RuuGoBW3a9R2ELYKRywUEQv0wvPTItv3DSGqjpbNtGWVdvT8qwdKkqvPzT93jp8tSF4+oN4IeTEIlQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .body::-webkit-scrollbar {
             display: none;
         }
-       
     </style>
     <script>
         $(document).ready(function() {
@@ -50,91 +52,11 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-    <div class="card-header">
-
-        <h4 class="card-title">Horizontal Form with Icons</h4>
-    </div>
-    <div class="card-content">
-        <div class="card-body">
-            <form class="form form-horizontal">
-                <div class="form-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label>Name</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group has-icon-left">
-                                <div class="position-relative">
-                                    <input type="text" class="form-control" placeholder="Name" id="first-name-icon">
-                                    <div class="form-control-icon">
-                                        <i class="bi bi-person"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label>Email</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group has-icon-left">
-                                <div class="position-relative">
-                                    <input type="email" class="form-control" placeholder="Email" id="first-name-icon">
-                                    <div class="form-control-icon">
-                                        <i class="bi bi-envelope"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label>Mobile</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group has-icon-left">
-                                <div class="position-relative">
-                                    <input type="number" class="form-control" placeholder="Mobile">
-                                    <div class="form-control-icon">
-                                        <i class="bi bi-phone"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label>Password</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="form-group has-icon-left">
-                                <div class="position-relative">
-                                    <input type="password" class="form-control" placeholder="Password">
-                                    <div class="form-control-icon">
-                                        <i class="bi bi-lock"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-8 offset-md-4">
-                            <div class="form-check">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="checkbox2" class="form-check-input" checked="">
-                                    <label for="checkbox2">Remember Me</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
-                            <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
 <body>
     <div id="app">
-         <nav class="navbar navbar-expand-sm mb-0 pb-2" style="box-shadow: none;">
+        <!-- <nav class="navbar navbar-expand-sm mb-0 pb-2 bg-white" style="box-shadow: none;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -144,18 +66,15 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar --> 
-                    <div class=" w-25 justify-content-end d-flex">
+                    <div class=" w-100 justify-content-end d-flex">
                     @yield('action_button')
                     </div>
                   
 
-                    <!-- Right Side Of Navbar -->
                     
                     <ul class="navbar-nav ms-auto ">
                     <div class=""> @yield('navigation')</div>
                         
-                        <!--
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
@@ -186,18 +105,17 @@
                             </div>
                         </li>
                         @endguest
-                        -->
                     </ul>
                 </div>
             </div>
-        </nav> 
+        </nav>  -->
         @auth
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
-                            <h3 class="">Mitaz Boutique</h3>
+                            <h3 class="text-center">InjiraERP</h3>
                         </div>
                         <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
@@ -239,11 +157,22 @@
                                 <span>Employee</span>
                             </a>
                         </li>
-                        <li class="sidebar-item @if (Str::contains(request()->url(), 'warehouse')) active @endif">
-                            <a href="/warehouse" class='sidebar-link'>
+                        <li class="sidebar-item has-sub @if (Str::contains(request()->url(), 'warehouse')) active @endif">
+                            <a class='sidebar-link'>
                                 <i class="bi bi-box-fill"></i>
                                 <span>Inventory & Stock</span>
                             </a>
+                            <ul class="submenu" style="--submenu-height: 210px;">
+                                <li class="submenu-item">
+                                    <a href="/warehouse" class="submenu-link h3 mt-2"><i class="bi bi-card-list me-2"></i>Main Data</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="/warehouse/supplier" class="submenu-link h3 mt-2"><i class="bi bi-truck me-2"></i>Suppliers & Manufacturer</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="/warehouse/branches" class="submenu-link h3 mt-2"><i class="bi bi-houses me-2"></i>Branch & Warehouse</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="sidebar-item @if (Str::contains(request()->url(), 'sales')) active @endif">
                             <a href="/sales" class='sidebar-link'>
@@ -253,11 +182,11 @@
                         </li>
                         <li class="sidebar-item @if (Str::contains(request()->url(), 'purchase')) active @endif">
                             <a href="/sales" class='sidebar-link'>
-                            <i class="bi bi-cart"></i>
+                                <i class="bi bi-cart"></i>
                                 <span>Purchase</span>
                             </a>
                         </li>
-                       
+
                         <li class="sidebar-item @if (Str::contains(request()->url(), 'settings')) active @endif">
                             <a href="/employee" class='sidebar-link'>
                                 <i class="bi bi-gear"></i>
@@ -268,13 +197,26 @@
                 </div>
             </div>
         </div>
-        @endauth
-        <main class="pb-2 pt-0">
+        <div class="main" id="sidebar-trig">
+            <div class="mb-3 p-3 d-flex justify-content-end">
+                <a class="btn btn-outline-danger ms-2">
+                    <i class="bi bi-box-arrow-right"></i>
+                </a>
+                <a class="btn btn-outline-secondary ms-2">
+                    <i class="bi bi-bootstrap-reboot"></i>
+                </a>
+                <a class="btn btn-outline-secondary ms-2 burger-btn">
+                    <i class="bi bi-justify"></i>
+                </a>
+            </div>
             @yield('content')
-        </main>
-        <script src="assets/js/app.js" type="module"></script>
+        </div>
+        @endauth
+
+
+        <script src="{{ asset('assets/js/app.js') }}" type="module"></script>
     </div>
- 
+
 </body>
 
 </html>

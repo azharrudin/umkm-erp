@@ -1,0 +1,6 @@
+.tab-pane:not(.active) {
+    display: none;
+}
+a {
+    text-decoration: none !important;;
+}
